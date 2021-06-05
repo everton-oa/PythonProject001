@@ -1,10 +1,12 @@
+from locators.Locators import Locators
+
+
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
-
-        self.username_typebox_id = "txtUsername"
-        self.password_typebox_id = "txtPassword"
-        self.login_button_id = "btnLogin"
+        self.username_typebox_id = Locators.username_typebox_id
+        self.password_typebox_id = Locators.password_typebox_id
+        self.login_button_id = Locators.login_button_id
 
     def enter_username(self, username):
         self.driver.find_element_by_id(self.username_typebox_id).send_keys(username)

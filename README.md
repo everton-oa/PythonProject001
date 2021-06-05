@@ -15,6 +15,7 @@ Project is created with:
 To run the project the user will need:
 * Python version 3.8.5
 * Pytest
+* Virtualenv
 * Selenium
 
 ## How to run
@@ -22,7 +23,7 @@ To run the project the user will need:
 
 1. Clone this repo using `git clone` 
 2. Open the project's folder using VSCode
-3. Create a new virtual environment for the project
+3. Create a new virtual environment for the project using Virtualenv
 4. Activate the new environment
 5. Run `pip installl -r requirements.txt` to install all packages needed
-6. run `python -m pytest`
+6. Run `python -m pytest`

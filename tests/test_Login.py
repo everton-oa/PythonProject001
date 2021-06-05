@@ -3,6 +3,7 @@ from pages.HomePage import HomePage
 from selenium import webdriver
 import time
 import unittest
+from pytest import mark
 
 
 class LoginTests(unittest.TestCase):
@@ -11,6 +12,8 @@ class LoginTests(unittest.TestCase):
         cls.driver = webdriver.Chrome()
         cls.driver.implicitly_wait(10)
 
+    @mark.login
+    @mark.smoke
     def test_login_valid(self):
         driver = self.driver
         self.driver.get("https://opensource-demo.orangehrmlive.com/")

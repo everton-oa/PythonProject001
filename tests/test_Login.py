@@ -6,17 +6,9 @@ import unittest
 from pytest import mark
 
 
-class LoginTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.driver = webdriver.Chrome()
-        cls.driver.implicitly_wait(10)
-
-    @mark.login
-    @mark.smoke
-    def test_login_valid(self):
-        driver = self.driver
-        self.driver.get("https://opensource-demo.orangehrmlive.com/")
+class LoginTests:
+    def test_login_valid(self, chrome_browser):
+        chrome_browser.get("https://opensource-demo.orangehrmlive.com/")
         login = LoginPage(driver)
         login.enter_username("Admin")
         login.enter_password("admin123")
@@ -25,9 +17,4 @@ class LoginTests(unittest.TestCase):
         homePage = HomePage(driver)
         homePage.click_on_welcome()
         homePage.click_on_logout()
-
-    @classmethod
-    def tearDownClass(cls):
         time.sleep(2)
-        cls.driver.close()
-        cls.driver.quit()

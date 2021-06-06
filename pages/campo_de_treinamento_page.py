@@ -21,7 +21,7 @@ class CampoDeTreinamentoPage(BasePage):
         self.send_key(self.SOBRENOME_TEXTFIELD, sobrenome)
 
     def select_sexo_masculino(self):
-        self.click(self, self.SEXO_RADIO)
+        self.click(self.SEXO_RADIO)
 
     def cadastra(self):
         self.click(self.CADASTRAR_BUTTON)

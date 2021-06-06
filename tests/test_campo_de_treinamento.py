@@ -1,3 +1,4 @@
+import time
 from tests.test_base import BaseTest
 from pages.campo_de_treinamento_page import CampoDeTreinamentoPage
 
@@ -9,4 +10,4 @@ class TestCadastro(BaseTest):
         self.campoDeTreinamento.fill_sobrenome("Araujo")
         self.campoDeTreinamento.select_sexo_masculino()
         self.campoDeTreinamento.cadastra()
-        self.time.sleep(3)
+        time.sleep(3)

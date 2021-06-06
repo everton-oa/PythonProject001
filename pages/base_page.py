@@ -1,11 +1,10 @@
-from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage:
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self, init_browser):
+        self.driver = init_browser
 
     def click(self, by_locator):
         WebDriverWait(self.driver, 10).until(

@@ -1,6 +1,6 @@
 import os
 from selenium.webdriver.common.by import By
-from Pages.basePage import BasePage
+from pages.base_page import BasePage
 
 
 class CampoDeTreinamentoPage(BasePage):
@@ -12,9 +12,7 @@ class CampoDeTreinamentoPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.driver.get(
-            driver.get("file://" + os.getcwd() + "/resources/componentes.html")
-        )
+        self.driver.get("file://" + os.getcwd() + "/resources/componentes.html")
 
     def fill_name(self, name):
         self.send_key(self.NOME_TEXTFIELD, name)

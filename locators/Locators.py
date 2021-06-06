@@ -1,10 +1,13 @@
+import os
+
+
 class Locators:
 
-    # LoginPage locators
-    username_typebox_id = "txtUsername"
-    password_typebox_id = "txtPassword"
-    login_button_id = "btnLogin"
+    # Campo de treinamento locators
+    NOME_TEXTFIELD = "elementosForm:nome"
+    SOBRENOME_TEXTFIELD = "elementosForm:sobrenome"
+    SEXO_RADIO = "elementosForm:sexo:0"
+    CADASTRAR_BUTTON = "elementosForm:cadastrar"
 
-    # HomePage locators
-    welcome_link_id = "welcome"
-    logout_link_linkText = "Logout"
+    # Campo de treinamento locators
+    CAMPO_DE_TREINAMENTO_URL = "file://" + os.getcwd() + "/resources/componentes.html"

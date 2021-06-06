@@ -1,18 +1,16 @@
-import os
+from locators.Locators import Locators
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
 class CampoDeTreinamentoPage(BasePage):
-
-    NOME_TEXTFIELD = (By.ID, "elementosForm:nome")
-    SOBRENOME_TEXTFIELD = (By.ID, "elementosForm:sobrenome")
-    SEXO_RADIO = (By.ID, "elementosForm:sexo:0")
-    CADASTRAR_BUTTON = (By.ID, "elementosForm:cadastrar")
-
     def __init__(self, driver):
         super().__init__(driver)
-        self.driver.get("file://" + os.getcwd() + "/resources/componentes.html")
+        self.driver.get(Locators.CAMPO_DE_TREINAMENTO_URL)
+        self.NOME_TEXTFIELD = (By.ID, Locators.NOME_TEXTFIELD)
+        self.SOBRENOME_TEXTFIELD = (By.ID, Locators.SOBRENOME_TEXTFIELD)
+        self.SEXO_RADIO = (By.ID, Locators.SEXO_RADIO)
+        self.CADASTRAR_BUTTON = (By.ID, Locators.CADASTRAR_BUTTON)
 
     def fill_name(self, name):
         self.send_key(self.NOME_TEXTFIELD, name)

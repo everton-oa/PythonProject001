@@ -11,12 +11,28 @@ Project is created with:
 * Page objects model
 * VSCode
 
-## Dependencies
-To run the project the user will need:
-* Python version 3.8.5
-* Pytest
+## Steps used to create this project (all links can be found in References section)
+* Install Virtual box
+* Create a VM using Linux Ubuntu 20.04.2.0 LTS
+* Install web browser (Google Chrome and Firefox)
+* Chromedriver and Geckodriver
+* Install Java (JDK11)
+* Install Python (version 3.8.5 was installed)
+* Install VSCode
 * Virtualenv
+* Virtualenvwrapper
+* Git
+* Github account
+* SSH key (to use on Github)
+### Packages
+* Pip
 * Selenium
+### Set path on my .bashrc file
+* Java
+* Python
+* Virtualenv 
+* Virtualtualenvwrapper
+* Drivers (Chromedriver and Geckodriver)
 
 ## How to run
 * Step by step
@@ -27,3 +43,26 @@ To run the project the user will need:
 4. Activate the new environment
 5. Run `pip installl -r requirements.txt` to install all packages needed
 6. Run `python -m pytest`
+
+## References and Links
+
+## Links
+* Virtual box
+https://www.virtualbox.org/wiki/Downloads 
+* Linux
+https://releases.ubuntu.com/20.04/ 
+* Chrome Browser
+https://www.google.com/chrome/browser/desktop/index.html 
+* Chromedriver
+https://chromedriver.chromium.org/downloads 
+* Firefox Browser
+https://www.mozilla.org/pt-BR/firefox/new/ 
+* Geckodriver
+https://github.com/mozilla/geckodriver/releases 
+* Java JDK
+https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html 
+* Python
+https://www.python.org/downloads/ 
+* VS Code
+https://code.visualstudio.com/download 
+

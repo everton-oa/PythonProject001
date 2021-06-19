@@ -7,9 +7,6 @@ class Browser:
 
     CHROME = 1
     FF = 2
-    PHANTOM = 3
-    IE = 4
-    OPERA = 5
 
     __DRIVER_MAP = {}
 
@@ -19,20 +16,12 @@ class Browser:
         thread_object = threading.currentThread()
 
         def get_driver():
-            if Browser.PHANTOM == driver_id:
-                driver = webdriver.PhantomJS()
-
-            elif Browser.CHROME == driver_id:
+            if Browser.CHROME == driver_id:
+                print("/n Initiating Chrome driver")
                 driver = webdriver.Chrome()
-
             elif Browser.FF == driver_id:
                 driver = webdriver.Firefox()
-
-            elif Browser.OPERA == driver_id:
-                driver = webdriver.Opera()
-
-            elif Browser.IE == driver_id:
-                driver = webdriver.Ie()
+                print("Initiating Gecko driver")
             else:
                 raise Exception(
                     "There is no support for driver_id: {}".format(driver_id)
@@ -48,12 +37,10 @@ class Browser:
 
     @staticmethod
     def shutdown():
-
         Browser.get_driver().quit()
 
     @staticmethod
     def __map(thread, driver):
-
         Browser.__DRIVER_MAP[thread] = {"driver": driver}
 
     @staticmethod

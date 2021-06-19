@@ -17,11 +17,11 @@ class Browser:
 
         def get_driver():
             if Browser.CHROME == driver_id:
-                print("/n Initiating Chrome driver")
+                print("\nInitiating Chrome driver")
                 driver = webdriver.Chrome()
             elif Browser.FF == driver_id:
                 driver = webdriver.Firefox()
-                print("Initiating Gecko driver")
+                print("\nInitiating Gecko driver")
             else:
                 raise Exception(
                     "There is no support for driver_id: {}".format(driver_id)
@@ -36,7 +36,12 @@ class Browser:
         return Browser.__DRIVER_MAP[threading.current_thread()]["driver"]
 
     @staticmethod
+    def maximize():
+        Browser.get_driver().maximize_window()
+
+    @staticmethod
     def shutdown():
+        print("\nClosing browser")
         Browser.get_driver().quit()
 
     @staticmethod

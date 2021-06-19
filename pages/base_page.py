@@ -9,13 +9,10 @@ class BasePage:
     def open_url(self, url):
         self.driver.get(url)
 
-    def maximize(self):
-        self.driver.maximize_window()
-
-    def get_actual_url(self):
+    def get_url(self):
         return self.driver.current_url
 
-    def get_actual_title(self):
+    def get_title(self):
         return self.driver.title
 
     def click(self, by_locator):

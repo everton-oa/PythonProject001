@@ -4,11 +4,6 @@
 This project is a team effort to learn more about software quality engineering and automation. It'll be used to generate ideas and discussions among the team with the goal to share knowledge.
 We are starting with a simple test automation project adding features as we advance in our studies.
 
-## Github of participants
-* Elyfran Medeiros - 
-* Everton Araujo - https://github.com/everton-oa 
-* Jairo Almeida - 
-
 ## Technologies, tools and frameworks
 Project is created with:
 * Programming language: Python

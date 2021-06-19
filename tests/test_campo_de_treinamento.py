@@ -11,4 +11,4 @@ class TestCadastro(BaseTest):
         self.campoDeTreinamento.fill_sobrenome("Araujo")
         self.campoDeTreinamento.select_sexo_masculino()
         self.campoDeTreinamento.cadastra()
-        time.sleep(3)
+        time.sleep(1)

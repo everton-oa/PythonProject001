@@ -6,6 +6,7 @@ from pytest import fixture
 def init_browser(request):
     web_driver = Browser.create_new_driver(Browser.CHROME)
     web_driver.maximize_window()
+    web_driver.implicitly_wait(10)
     request.cls.driver = web_driver
     yield
     web_driver.close()

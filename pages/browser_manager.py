@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
 
 class Browser:
@@ -14,6 +13,4 @@ class Browser:
         elif Browser.FF == driver_id:
             driver = webdriver.Firefox()
             print("\nInitiating GeckoDriver")
-        else:
-            raise Exception("There is no support for driver_id: {}".format(driver_id))
         return driver

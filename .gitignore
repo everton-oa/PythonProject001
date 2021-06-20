@@ -2,6 +2,8 @@
 #Files to be ignored
 .DS_Store
 .vscode
+screenshots
+reports
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

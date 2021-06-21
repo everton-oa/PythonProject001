@@ -43,10 +43,10 @@ class CampoDeTreinamentoPage(BasePage):
         self.click_checkbox(self.COMIDA_FAVORITA_VEGETARIANO)
 
     def select_escolaridade_mestrado(self):
-        self.select(self.SELECT_ESCOLARIDADE, "Mestrado")
+        self.select_by_text(self.SELECT_ESCOLARIDADE, "Mestrado")
 
     def select_esporte_corrida(self):
-        self.select(self.SELECT_ESPORTE, "Corrida")
+        self.select_by_text(self.SELECT_ESPORTE, "Corrida")
 
     def cadastra(self):
         self.click(self.CADASTRAR_BUTTON)

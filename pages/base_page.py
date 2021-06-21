@@ -12,6 +12,11 @@ class BasePage:
             EC.visibility_of_element_located(by_locator)
         )
 
+    def get_elements(self, by_locator):
+        return WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_elements_located(by_locator)
+        )
+
     def open_url(self, url):
         self.driver.get(url)
 
@@ -41,10 +46,13 @@ class BasePage:
         element = self.get_element(by_locator)
         return element.text
 
+    def get_attibute(self, by_locator):
+        return self.get_element().get_attibute("innetText")
+
     def is_enabled(self, by_locator):
         element = self.get_element(by_locator)
         return bool(element)
 
-    def select(self, by_locator, value):
+    def select_by_text(self, by_locator, value):
         select = Select(self.get_element(by_locator))
         return select.select_by_visible_text(value)
